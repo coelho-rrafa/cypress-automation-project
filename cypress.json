@@ -1,0 +1,15 @@
+{
+  "testFiles": "**/*.feature",
+  "baseUrl": "http://automationpractice.com/",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss",
+    "reportTitle": "Automation Pratice Reports",
+    "cdn": true,
+    "charts": true
+  }
+}
