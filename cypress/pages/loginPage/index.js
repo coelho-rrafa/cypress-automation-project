@@ -23,6 +23,28 @@ class loginPage{
       cy.get(loginElem.submitCreateButton).click()
     })
   }
+
+  loginError(email, password){
+    if(email == ''){
+      cy.get(loginElem.login.password).type(password)
+      cy.get(loginElem.signInButton).click()
+    }else if(password == ''){
+      cy.get(loginElem.login.email).type(email)
+      cy.get(loginElem.signInButton).click()
+    }else{
+      cy.get(loginElem.login.email).type(email)
+      cy.get(loginElem.login.password).type(password)
+      cy.get(loginElem.signInButton).click()
+    }
+  }
+
+  validatePage(){
+    cy.url().should('contain', 'authentication')
+  }
+
+  validateErrorMessage(message){
+    cy.get(loginElem.errorMessage).should('contain', message)
+  }
 }
 
 export default new loginPage();

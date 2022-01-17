@@ -7,5 +7,6 @@ export const loginElements = {
   },
   signInButton: '#SubmitLogin',
   createEmailInput: '#email_create',
-  submitCreateButton: '#SubmitCreate'
+  submitCreateButton: '#SubmitCreate',
+  errorMessage: '#center_column > :nth-child(2)'
 }
